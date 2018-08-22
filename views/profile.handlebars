@@ -1,0 +1,250 @@
+<div id= "span"><span id="greeting"></span></div>
+<img src="./assets/images/quotePic.jpg" alt="myPlate" id="quote">
+<div id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">
+                            <h2>My Profile</h2>
+                            
+                        </h1>
+                        <p class="lead">Build your profile to track your goals.</p>
+
+                        <img src="./assets/images/blueberries.jpg" alt="Fruits" id="blueberriesImage">
+                        <div id="userInformation">
+
+                            <img src="./assets/images/info_ball.png" alt="Fruits" id="infoImage">
+
+                            <button id="ViewProfile" type='button' class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-dismiss="modal" data-target="#viewProfileData">View Profile
+                            </button>
+
+                            <button id="editProfile" type='button' class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-dismiss="modal" data-target="#editProfileData">Edit Profile
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="viewProfileData">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- header -->
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Profile Information</h3>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <!-- body -->
+                                <div class="modal-header">
+                                    <form role="form">
+                                        {{!-- <h3>Profile Information</h3> --}}
+                                        <div class="form-group">
+                                            <label for="example-description">Name:</label>
+                                            <h7 id="viewProfileName" for="example-description"></h7>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="example-description">Age:</label>
+                                            <h7 id="viewProfileAge" for="example-description"></h7>
+                                        </div>
+                                        <div class="form-group"></div>
+                                        <label for="example-description">Weight:</label>
+                                        <h7 id="viewProfileWeight" for="example-description"></h7>
+                                </div>
+                                <div class="form-group">
+                                    <label for="example-description">Weight Goal:</label>
+                                    <h7 id="viewProfileCalorieGoal" for="example-description"></h7>
+                                </div>
+                                <div class="form-group">
+                                    <label for="example-description">Calories/Day:</label>
+                                    <h7 id="viewProfileCaloriesAmount" for="example-description"></h7>
+                                </div>
+                                <button id="editProfile" type='button' class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-dismiss="modal" data-target="#editProfileData">Edit Profile
+                                </button>
+                                <br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="editProfileData">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- header -->
+                            <div class="modal-header">
+                                <h3 class="modal-title">Enter Your Profile Information</h3>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- body -->
+                            <div class="modal-header">
+                                <form role="form">
+                                    {{!-- <h3>Enter your Profile Information</h3> --}}
+                                    <div class="form-group">
+                                        <label for="example-description">Name</label>
+                                        <input class="form-control" id="profileName" aria-describedby="example-description" placeholder=""></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-description">Age</label>
+                                        <input class="form-control" id="profileAge" aria-describedby="example-description" placeholder=""></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-description">Weight</label>
+                                        <input class="form-control" id="profileWeight" aria-describedby="example-description" placeholder=""></input>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="example-description">Weight Goal (lose, gain, maintain)</label>
+                                        <input class="form-control" id="profileCalorieGoal" aria-describedby="example-description" placeholder="Feed Me!"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-description">Calories Per Day</label>
+                                        <input class="form-control" id="profileCalorieGoalAmount" aria-describedby="example-description" placeholder="Feed Me!"></input>
+                                    </div>
+                                    <button id="profileFormSubmit" class="btn btn-primary float-left">Submit Profile Details</button>
+                                    <br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/images/pushingImage.jpg" alt="pushing" id="pushingImage">
+
+              
+
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Are You On Track?</h1>
+                        <br>
+                        <div id = "myPlateDiv">
+                        <a href="https://www.choosemyplate.gov/">
+
+                            <img src="./assets/images/myplate.png" alt="myPlate" id="myPlate">
+                        </a>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            Add Meal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Add Meal:</h5>
+                                        <button type="button" class="close closeFoodModal" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="onTrackForm">
+                                            <div class="form-group ">
+                                                <label for="formGroupExampleInput">What did you eat?</label>
+                                                <input type="text" class="form-control" id="foodInput" placeholder="Example input">
+
+                                            </div>
+                                            <label for="formGroupExampleInput">When did you eat?</label>
+                                            <br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input was " name="mealTime" type="radio" id="breakfast" value="Breakfast">
+                                                <label class="form-check-label" for="breakfast">Breakfast</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" name="mealTime" type="radio" id="lunch" value="Lunch">
+                                                <label class="form-check-label" for="lunch">Lunch</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" name="mealTime" type="radio" id="dinner" value="Dinner">
+                                                <label class="form-check-label" for="dinner">Dinner</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" name="mealTime" type="radio" id="snack" value="Snack">
+                                                <label class="form-check-label" for="snack">Snack</label>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h5 id="showMealName"></h5>
+                                                <h5 id="showCalAmount"></h5>
+                                            </div>
+
+                                            <div>
+                                                <button id="submitFood" class="btn btn-success ">Submit</button>
+                                            </div>
+                                            <button class='btn btn-success' id='sendFoodToDb'>Track Meal?</button>
+
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary closeFoodModal" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- Meal Summary Container --}}
+                        <div id="calorieSummary">
+                            <br>
+
+                            <h4>
+                                <span id="summaryHeader">Daily Summary</span>
+                            </h4>
+                            <h5 id="dailySummaryTotalCal"></h5>
+                            <br>
+                        </div>
+                        <h4>Meal History</h4>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                            View
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Meal History:</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div id="historyTablePlace" class="modal-body">
+                                        This section is under construction. Please check back later.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+
+                </div>
+                <ul id="example-list" class="list-group">
+                    {{#each userData}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <a href="example/{{this.id}}">{{this.text}}</a>
+                        <button class="btn btn-danger float-right delete">ｘ</button>
+                    </li>
+                    {{/each}}
+                </ul>
+
+
+
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script> {{!--
+<script src="/js/index.js"></script> --}}
+<script src="/js/profile.js"></script>

@@ -1,0 +1,128 @@
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">
+              <h2>My Blog</h2>
+                          <img src="./assets/images/blog4.gif" alt="blog" id="blogPhoto">
+
+            </h1>
+            <p class="lead">Keep track of your progress and write inspirational notes.</p>
+            </h1>
+            {{!-- <img src="./assets/images/blog4.gif" alt="blog" id="blogPhoto"> --}}
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <button type="button" class="btn btn-primary" id="allBlogsButton">All Blogs</button>
+              </div>
+            </div>
+            <br>
+            <div class="container2">
+              {{!-- <button type="button" class="btn btn-primary" id="yourBlogsButton">My Blogs</button> --}}
+            </div>
+            <br>
+            {{!-- <div class="col-9" id="blogDropdown"> --}}
+              {{!--
+              <div class="input-group"> --}}
+  <div class="btn-group">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Search by Topic
+  </button>
+                  {{!-- <br> --}}
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="/blog/topic/Healthy Eating">Healthy Eating</a>
+    <a class="dropdown-item" href="/blog/topic/Excercise">Excercise</a>
+    <a class="dropdown-item" href="/blog/topic/Motivation">Motivation</a>
+    <a class="dropdown-item" href="/blog/topic/Misc">Misc</a>
+  </div>
+                  <br>
+                {{!-- </div> --}}
+                <br>
+              </div>
+              {{!--
+            </div> --}} {{!-- <br> --}}
+            <div>
+              {{!-- <br> --}} {{!-- <input type="text" class="form-control" placeholder="Search blogs by username" aria-label="Search blogs by username"
+                aria-describedby="button-addon4"> --}}
+              <div class="input-group-append" id="button-addon4">
+                {{!-- <button class="btn btn-outline-secondary" type="button">Search</button> --}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid" id="blogContainer">
+          <div class="container">
+            <h1 class="display-4">Create a New Post:</h1>
+            <br>
+            <div>
+              <p>
+                <a class="btn btn-primary" id="#newBlogPostForm" data-toggle="collapse" href="#newBlogPostForm" role="button" aria-expanded="false"
+                  aria-controls="multiCollapseExample1">Add New Blog Post +</a>
+              </p>
+              <div class="collapse multi-collapse" id="newBlogPostForm">
+                <div class="card card-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="FormControlInput1">Post Title:</label>
+                      <input class="form-control" id="new-blog-title" placeholder="Ex: Today I ....">
+                    </div>
+                    <div class="form-group">
+                      <label for="FormControlSelect1">Topic:</label>
+                      <select class="form-control" id="new-blog-topic">
+                        <option>Healthy Eating</option>
+                        <option>Excercise</option>
+                        <option>Motivation</option>
+                        <option>Misc</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="FormControlTextarea1">Post Contents:</label>
+                      <textarea class="form-control" id="new-blog-message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2" id="new-blog-submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div>
+            <p class="lead">My Blog Posts:</p>
+              {{#each blogs}}
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                                    <div class="row">
+    <div class="col-sm">
+      {{this.title}}
+    </div>
+    {{!-- <div class="col-sm">
+      By: {{this.name}}
+    </div> --}}
+    <div class="col-sm">
+      In: {{this.topic}}
+    </div>
+  </div>
+                  </h5>
+                </div>
+                <div class="card-body">
+                  {{this.message}}
+                </div>
+              </div>
+             {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+<br>
+<br>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/blog.js"></script>
